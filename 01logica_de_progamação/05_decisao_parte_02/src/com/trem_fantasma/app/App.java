@@ -43,6 +43,6 @@ public class App {
 
 
         //fecha o objeto Scanner
-        leia.close();
+         leia.close();
     }
 }
