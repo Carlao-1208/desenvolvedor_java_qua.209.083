@@ -1,12 +1,11 @@
 package com.atividade_04;
 
 import java.util.Scanner;
+
+
 public class App {
-
-    
-
     public static void main(String[] args) throws Exception {
-        // intancia a classe Scanner
+         // intancia a classe Scanner
         Scanner leia = new Scanner(System.in);
 
         //decalração de variáveis
@@ -15,6 +14,7 @@ public class App {
         int idade;
         String sala;
         int idadeMinima = 0;
+        String filme = "";
 
 
         //inicializar o array
@@ -44,17 +44,48 @@ public class App {
             System.out.println("Informe a sala desejada:");
             sala = leia.nextLine();
 
-            //TO DO terminar o programa
+            switch (sala) {
+                case "1" :
+                filme = salas[0];
+                idadeMinima = 0;
+                    break;
+                case "2" :
+                filme = salas [1];
+                    break;
+                case "3" :
+                filme = salas[2];
+                idadeMinima = 12;
+                    break;
+                case "4" :
+                filme = salas[3];
+                idadeMinima = 16;
+                case "5" :
+                filme = salas[4];
+                idadeMinima = 18;
+                    break;
+                default:
+                System.out.println("Sala inexistente.");
+            }
+
+            // verificação de idade
+            if(idade >= idadeMinima) {
+                System.out.println("filme escolhido.");
+                System.out.println("Tenha um bom filme, " + nome);
+                System.out.println("🎞");
+            }
+            else {
+                System.out.println("Entrada não permitida.");
+                System.out.println("Favor escolher outro filme");
+               
+                
+            }
+
+            
         } while (idade < idadeMinima);
 
 
 
         //fecha o objeto leia
         leia.close();
-    }        
-
-       
-       
-    
-    
-
+    }
+}
